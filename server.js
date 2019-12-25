@@ -38,8 +38,7 @@ app.get('/', (req, res) => {
 
 app.post('/signin', (req, res) => {
 	const valid = validate(database, req.body.email, req.body.password);
-	return valid ? res.json('success') : res.status(400).json('error logging in');
-	res.json('success');
+	return valid ? res.json(database.users[0]) : res.status(400).json('error logging in');
 });
 
 app.post('/register', (req, res) => {
@@ -80,7 +79,7 @@ app.put('/profile/update', (req, res) => {
 })
 
 app.listen(3000, ()=> {
-	console.log('app is running on port 3001');
+	console.log('app is running on port 3000');
 });
 
 
