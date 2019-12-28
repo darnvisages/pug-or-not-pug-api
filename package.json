@@ -4,7 +4,7 @@
   "description": "pug or not pug backend",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
