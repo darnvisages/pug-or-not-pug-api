@@ -39,8 +39,8 @@ app.post('/image/faces', (req, res) => { image.handleFaceCall(req, res)})
 
 app.post('/image/pug', (req, res) => { image.handlePugCall(req, res)})
 
-const PORT = 3000;//process.env.PORT;
-app.listen(PORT, ()=> {
+const PORT = process.env.PORT;
+app.listen(PORT || 3000, ()=> {
 	console.log(`app is running on port ${PORT}`);
 });
 
